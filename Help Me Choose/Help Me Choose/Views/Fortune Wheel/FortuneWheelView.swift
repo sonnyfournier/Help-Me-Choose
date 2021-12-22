@@ -25,21 +25,26 @@ struct FortuneWheelView: View {
 
     // MARK: - Views
     public var body: some View {
-        ZStack(alignment: .top) {
-            ZStack(alignment: .center) {
-                WheelView(labels: titles)
-                    .frame(width: size, height: size)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: size / 2)
-                            .stroke(lineWidth: 7)
-                            .foregroundColor(Color("WheelStroke"))
-                    )
-                    .rotationEffect(.degrees(viewModel.degree))
-                WheelBoltView()
-                    .onTapGesture { viewModel.spinWheel() }
+        VStack {
+            ZStack(alignment: .top) {
+                ZStack(alignment: .center) {
+                    WheelView(labels: titles, selectedIndex: $viewModel.selectedIndex)
+                        .frame(width: size, height: size)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: size / 2)
+                                .stroke(lineWidth: 7)
+                                .foregroundColor(Color("WheelStroke"))
+                        )
+                        .rotationEffect(.degrees(viewModel.degree))
+                    WheelBoltView()
+                        .onTapGesture { viewModel.spinWheel() }
+                }
+                WheelPointerView()
+                    .offset(x: 0, y: -25)
             }
-            WheelPointerView()
-                .offset(x: 0, y: -25)
+            Button(action: { viewModel.selectedIndex = nil }) {
+                Text("Reset")
+            }.padding()
         }
     }
 

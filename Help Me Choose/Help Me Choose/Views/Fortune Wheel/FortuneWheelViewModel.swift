@@ -12,6 +12,7 @@ class FortuneWheelViewModel: ObservableObject {
     // MARK: - Properties
     var titles: [String]
     @Published var degree = 0.0
+    @Published var selectedIndex: Int?
     private var onSpinEnd: ((Int) -> ())?
     private var pendingRequestWorkItem: DispatchWorkItem?
 
@@ -38,6 +39,8 @@ class FortuneWheelViewModel: ObservableObject {
             let distance = self.degree.truncatingRemainder(dividingBy: 360)
             let pointer = floor(distance / (360 / Double(self.titles.count)))
 
+            let index = self.titles.count - Int(pointer) - 1
+            self.selectedIndex = index
             self.onSpinEnd?(self.titles.count - Int(pointer) - 1)
         }
 

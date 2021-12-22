@@ -11,6 +11,7 @@ struct WheelView: View {
 
     // MARK: Properties
     var labels: [String]
+    @Binding var selectedIndex: Int?
     private let sliceOffset: Double = -.pi / 2
     private let colors: [Color] = [Color("Wheel1"), Color("Wheel2"), Color("Wheel3"), Color("Wheel4"), Color("Wheel5"),
                                    Color("Wheel6"), Color("Wheel7"), Color("Wheel8"), Color("Wheel9"), Color("Wheel10")]
@@ -26,6 +27,10 @@ struct WheelView: View {
                         .shadow(color: Color("ShadowLight").opacity(0.35), radius: 3, x: 0.0, y: 1.0)
                         .rotationEffect(textRotation(for: index))
                         .offset(viewOffset(for: index, in: geo.size)).zIndex(1)
+                    WheelCell(startAngle: startAngle(for: index), endAngle: endAngle(for: index))
+                        .fill(Color("ShadowDark"))
+                        .opacity(getOpacity(for: index))
+                        .animation(.easeInOut, value: getOpacity(for: index))
                 }
             }
         }
@@ -73,11 +78,16 @@ struct WheelView: View {
         return Angle(radians: angle)
     }
 
+    private func getOpacity(for index: Int) -> Double {
+        return (selectedIndex == index || selectedIndex == nil) ? 0 : 0.7
+    }
+
 }
 
 // MARK: - Preview
 struct WheelView_Previews: PreviewProvider {
     static var previews: some View {
-        WheelView(labels: ["Paris", "Berlin", "New-York", "Barcelone", "Rome", "Casablanca", "Bruxelles", "Tokyo"])
+        WheelView(labels: ["Paris", "Berlin", "New-York", "Barcelone", "Rome", "Casablanca", "Bruxelles", "Tokyo"],
+                  selectedIndex: .constant(nil))
     }
 }
