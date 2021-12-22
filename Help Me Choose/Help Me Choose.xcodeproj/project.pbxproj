@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		E050DEFF277362DB00C4D7A0 /* Help_Me_ChooseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DEFE277362DB00C4D7A0 /* Help_Me_ChooseApp.swift */; };
-		E050DF01277362DB00C4D7A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF00277362DB00C4D7A0 /* ContentView.swift */; };
+		E050DF01277362DB00C4D7A0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF00277362DB00C4D7A0 /* TabBarView.swift */; };
 		E050DF03277362DE00C4D7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E050DF02277362DE00C4D7A0 /* Assets.xcassets */; };
 		E050DF06277362DE00C4D7A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E050DF05277362DE00C4D7A0 /* Preview Assets.xcassets */; };
+		E050DF142773657E00C4D7A0 /* FortuneWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF132773657E00C4D7A0 /* FortuneWheelView.swift */; };
+		E050DF16277365A100C4D7A0 /* FortuneWheelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF15277365A100C4D7A0 /* FortuneWheelViewModel.swift */; };
+		E050DF18277365D800C4D7A0 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF17277365D800C4D7A0 /* WheelView.swift */; };
+		E050DF1A2773660800C4D7A0 /* WheelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF192773660800C4D7A0 /* WheelCell.swift */; };
+		E050DF1D2773721600C4D7A0 /* WheelPointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF1C2773721600C4D7A0 /* WheelPointerView.swift */; };
+		E050DF1F2773729400C4D7A0 /* WheelBoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E050DEFB277362DB00C4D7A0 /* Help Me Choose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Help Me Choose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E050DEFE277362DB00C4D7A0 /* Help_Me_ChooseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help_Me_ChooseApp.swift; sourceTree = "<group>"; };
-		E050DF00277362DB00C4D7A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E050DF00277362DB00C4D7A0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		E050DF02277362DE00C4D7A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E050DF05277362DE00C4D7A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E050DF132773657E00C4D7A0 /* FortuneWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneWheelView.swift; sourceTree = "<group>"; };
+		E050DF15277365A100C4D7A0 /* FortuneWheelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneWheelViewModel.swift; sourceTree = "<group>"; };
+		E050DF17277365D800C4D7A0 /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		E050DF192773660800C4D7A0 /* WheelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelCell.swift; sourceTree = "<group>"; };
+		E050DF1C2773721600C4D7A0 /* WheelPointerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPointerView.swift; sourceTree = "<group>"; };
+		E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelBoltView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +90,8 @@
 		E050DF0D277362F200C4D7A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E050DF00277362DB00C4D7A0 /* ContentView.swift */,
+				E050DF00277362DB00C4D7A0 /* TabBarView.swift */,
+				E050DF1B27736A2E00C4D7A0 /* Fortune Wheel */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,6 +102,27 @@
 				E050DEFE277362DB00C4D7A0 /* Help_Me_ChooseApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E050DF1B27736A2E00C4D7A0 /* Fortune Wheel */ = {
+			isa = PBXGroup;
+			children = (
+				E050DF132773657E00C4D7A0 /* FortuneWheelView.swift */,
+				E050DF15277365A100C4D7A0 /* FortuneWheelViewModel.swift */,
+				E050DF202773900500C4D7A0 /* Wheel */,
+			);
+			path = "Fortune Wheel";
+			sourceTree = "<group>";
+		};
+		E050DF202773900500C4D7A0 /* Wheel */ = {
+			isa = PBXGroup;
+			children = (
+				E050DF17277365D800C4D7A0 /* WheelView.swift */,
+				E050DF192773660800C4D7A0 /* WheelCell.swift */,
+				E050DF1C2773721600C4D7A0 /* WheelPointerView.swift */,
+				E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */,
+			);
+			path = Wheel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E050DF01277362DB00C4D7A0 /* ContentView.swift in Sources */,
+				E050DF16277365A100C4D7A0 /* FortuneWheelViewModel.swift in Sources */,
+				E050DF1F2773729400C4D7A0 /* WheelBoltView.swift in Sources */,
+				E050DF142773657E00C4D7A0 /* FortuneWheelView.swift in Sources */,
+				E050DF1D2773721600C4D7A0 /* WheelPointerView.swift in Sources */,
+				E050DF18277365D800C4D7A0 /* WheelView.swift in Sources */,
+				E050DF1A2773660800C4D7A0 /* WheelCell.swift in Sources */,
+				E050DF01277362DB00C4D7A0 /* TabBarView.swift in Sources */,
 				E050DEFF277362DB00C4D7A0 /* Help_Me_ChooseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
