@@ -24,10 +24,11 @@ class FortuneWheelViewModel: ObservableObject {
 
     // MARK: - Functions
     func spinWheel() {
+        selectedIndex = nil
         let random = Double.random(in: 720...7200)
         let animationDuration = Double(5)
         let animation = Animation.timingCurve(0.51, 0.97, 0.56, 0.99, duration: animationDuration)
-        withAnimation(animation) { self.degree += random }
+        withAnimation(animation) {  [weak self] in self?.degree += random }
 
         // Cancel the currently pending item
         pendingRequestWorkItem?.cancel()
@@ -47,6 +48,12 @@ class FortuneWheelViewModel: ObservableObject {
         // Save the new work item and execute it after duration
         pendingRequestWorkItem = requestWorkItem
         DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration + 1, execute: requestWorkItem)
+    }
+
+    func resetWheel() {
+        selectedIndex = nil
+        let roundedDegree = Double(360 * Int(degree / 360))
+        withAnimation(.easeInOut) { [weak self] in self?.degree = roundedDegree }
     }
 
 }

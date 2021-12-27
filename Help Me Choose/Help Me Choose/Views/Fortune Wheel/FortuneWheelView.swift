@@ -11,6 +11,7 @@ struct FortuneWheelView: View {
 
     // MARK: - Properties
     @StateObject var viewModel: FortuneWheelViewModel
+    @State var tap = false
     var titles: [String]
     var size: CGFloat
     var onSpinEnd: ((Int) -> ())? = nil
@@ -37,12 +38,18 @@ struct FortuneWheelView: View {
                         )
                         .rotationEffect(.degrees(viewModel.degree))
                     WheelBoltView()
-                        .onTapGesture { viewModel.spinWheel() }
+                        .scaleEffect(tap ? 1.2 : 1)
+                        .animation(.spring(), value: tap ? 1.2 : 1)
+                        .onTapGesture {
+                            tap = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { tap = false }
+                            viewModel.spinWheel()
+                        }
                 }
                 WheelPointerView()
                     .offset(x: 0, y: -25)
             }
-            Button(action: { viewModel.selectedIndex = nil }) {
+            Button(action: { viewModel.resetWheel() }) {
                 Text("Reset")
             }.padding()
         }
