@@ -70,7 +70,7 @@ struct WheelView: View {
     }
 
     private func viewOffset(for index: Int, in size: CGSize) -> CGSize {
-        let radius = min(size.width, size.height) / 3
+        let radius = min(size.width, size.height) / 3.3
         let dataRatio = (2 * weights[..<index].reduce(0, +) + weights[index]) / (2 * weights.reduce(0, +))
         let angle = CGFloat(sliceOffset + 2 * .pi * dataRatio)
 
