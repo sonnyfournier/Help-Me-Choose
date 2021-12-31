@@ -42,8 +42,8 @@ struct FortuneWheelView: View {
                             .frame(width: size, height: size)
                             .overlay(
                                 RoundedRectangle(cornerRadius: size / 2)
-                                    .stroke(lineWidth: 7)
-                                    .foregroundColor(Color("WheelStroke"))
+                                    .stroke(lineWidth: 5)
+                                    .foregroundColor(ThemeService.getTheme(from: viewModel.decision.themeName).strokeColor)
                             )
                             .rotationEffect(.degrees(viewModel.degree))
                         WheelBoltView(emoji: viewModel.decision.emoji)
@@ -55,7 +55,7 @@ struct FortuneWheelView: View {
                                 viewModel.spinWheel()
                             }
                     }
-                    WheelPointerView()
+                    WheelPointerView(decision: $viewModel.decision)
                         .offset(x: 0, y: -25)
                 }
 

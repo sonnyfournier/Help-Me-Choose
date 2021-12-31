@@ -33,9 +33,7 @@ struct WheelSettingsDetailsView: View {
 
                     buildChoicesSection()
 
-                    Section {
-                        Button(action: { addChoice() }) { Text("add_a_choice") }
-                    }
+                    NavigationLink("theme", destination: ThemeView(decision: $decision))
                 }
             }
             .confirmationDialog("Change background", isPresented: $showUnsavedChangesSheet) {
@@ -83,6 +81,10 @@ struct WheelSettingsDetailsView: View {
             List {
                 ForEach(decision.choices.indices, id: \.self) { index in
                     HStack {
+                        ThemeService.getTheme(from: decision.themeName)
+                            .colors[index % ThemeService.getTheme(from: decision.themeName).colors.count]
+                            .frame(width: 3)
+                            .cornerRadius(1.5)
                         TextField("choice", text: $decision.choices[index])
                         Button(action: { removeChoice(at: index) }, label: {
                             Image(systemName: "xmark.circle")
@@ -96,6 +98,7 @@ struct WheelSettingsDetailsView: View {
                     }
                 }
             }
+            Button(action: { addChoice() }) { Text("add_a_choice") }
         }
     }
 

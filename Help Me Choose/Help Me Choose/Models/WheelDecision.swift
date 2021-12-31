@@ -15,6 +15,7 @@ struct WheelDecision: Identifiable, Hashable, Codable {
     var choices: [String]
     var weights: [Double]
     var isSelected: Bool
+    var themeName: String?
 
     init(emoji: String? = nil, title: String, choices: [String], weights: [Double]? = nil, isSelected: Bool = false) {
         self.id = UUID()
@@ -23,6 +24,7 @@ struct WheelDecision: Identifiable, Hashable, Codable {
         self.choices = choices
         self.weights = weights ?? Array(repeating: 1, count: choices.count)
         self.isSelected = isSelected
+        self.themeName = Constants.Themes.allThemes.randomElement()?.name
     }
 
 }

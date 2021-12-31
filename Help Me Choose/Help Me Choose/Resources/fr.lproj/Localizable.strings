@@ -26,6 +26,7 @@
 "add_a_choice" = "Ajouter un choix";
 "save_modifications" = "Enregistrer les modifications";
 "ignore_modifications" = "Ignorer les modifications";
+"theme" = "Thème";
 
 // MARK: - Wheel defaults decisions
 "next_vacation_destination" = "Prochaine vacances";
@@ -36,3 +37,8 @@
 "italia" = "Italie";
 "japan" = "Japon";
 "korea" = "Corée";
+"corsica" = "Corse";
+"germany" = "Allemagne";
+"uk" = "Royaume-Uni";
+"denmark" = "Danemark";
+"poland" = "Pologne";

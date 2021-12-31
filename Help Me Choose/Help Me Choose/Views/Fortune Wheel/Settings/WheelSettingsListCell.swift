@@ -16,7 +16,7 @@ struct WheelSettingsListCell: View {
     var body: some View {
         HStack {
             if decision.isSelected {
-                Color("Pointer")
+                ThemeService.getTheme(from: decision.themeName).pointerColor
                     .frame(width: 3)
                     .cornerRadius(1.5)
             }

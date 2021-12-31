@@ -14,14 +14,14 @@ struct WheelView: View {
     var weights: [Double]
     @Binding var selectedIndex: Int?
     private let sliceOffset: Double = -.pi / 2
-    private let colors: [Color] = [Color("Wheel1"), Color("Wheel2"), Color("Wheel3"), Color("Wheel4"), Color("Wheel5"),
-                                   Color("Wheel6"), Color("Wheel7"), Color("Wheel8"), Color("Wheel9"), Color("Wheel10")]
+    private let colors: [Color]
 
     // MARK: - Initialization
     init(decision: WheelDecision, selectedIndex: Binding<Int?> = .constant(nil)) {
         self.labels = decision.choices
         self.weights = decision.weights.map({ Double((Int($0) * 100) / decision.choices.count) })
         self._selectedIndex = selectedIndex
+        self.colors = ThemeService.getTheme(from: decision.themeName).colors
     }
 
     // MARK: - Views
@@ -31,8 +31,9 @@ struct WheelView: View {
                 ForEach(labels.indices, id: \.self) { index in
                     WheelCell(startAngle: startAngle(for: index), endAngle: endAngle(for: index))
                         .fill(colors[index % colors.count])
-                    Text(labels[index]).foregroundColor(Color.white).fontWeight(.bold)
-                        .shadow(color: Color("ShadowLight").opacity(0.35), radius: 3, x: 0.0, y: 1.0)
+                    Text(labels[index])
+                        .foregroundColor(Color.white).fontWeight(.bold)
+                        .shadow(color: Color("ShadowDark").opacity(0.55), radius: 2, x: 0, y: 0)
                         .rotationEffect(textRotation(for: index, in: geo.size))
                         .offset(viewOffset(for: index, in: geo.size)).zIndex(1)
                     WheelCell(startAngle: startAngle(for: index), endAngle: endAngle(for: index))

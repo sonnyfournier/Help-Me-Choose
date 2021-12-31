@@ -25,6 +25,9 @@
 		E0A29F7D277F20490072ED7E /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F7C277F20490072ED7E /* EmojiTextField.swift */; };
 		E0A29F7F277F2D700072ED7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F7E277F2D700072ED7E /* Constants.swift */; };
 		E0A29F81277F332C0072ED7E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F80277F332C0072ED7E /* Localization.swift */; };
+		E0A29F84277F4AC30072ED7E /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F83277F4AC30072ED7E /* ThemeService.swift */; };
+		E0A29F86277F4B000072ED7E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F85277F4B000072ED7E /* Theme.swift */; };
+		E0A29F88277F665C0072ED7E /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F87277F665C0072ED7E /* ThemeView.swift */; };
 		E0FDED19277B459200CB122B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0FDED1B277B459200CB122B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		E0A29F7C277F20490072ED7E /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
 		E0A29F7E277F2D700072ED7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E0A29F80277F332C0072ED7E /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		E0A29F83277F4AC30072ED7E /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		E0A29F85277F4B000072ED7E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E0A29F87277F665C0072ED7E /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		E0FDED1A277B459200CB122B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E0FDED1C277B459300CB122B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +76,7 @@
 				E01B59122779FCE800EEA62B /* WheelSettingsListCell.swift */,
 				E01B59142779FF2600EEA62B /* WheelSettingsDetailsView.swift */,
 				E0A29F7C277F20490072ED7E /* EmojiTextField.swift */,
+				E0A29F87277F665C0072ED7E /* ThemeView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -78,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				E01B5918277A024100EEA62B /* WheelDecision.swift */,
+				E0A29F85277F4B000072ED7E /* Theme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 				E01B591A277A062800EEA62B /* Helpers */,
 				E01B5917277A023400EEA62B /* Models */,
 				E050DF0C277362EC00C4D7A0 /* Resources */,
+				E0A29F82277F4AB50072ED7E /* Services */,
 				E050DF0D277362F200C4D7A0 /* Views */,
 			);
 			path = "Help Me Choose";
@@ -175,6 +184,14 @@
 				E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */,
 			);
 			path = Wheel;
+			sourceTree = "<group>";
+		};
+		E0A29F82277F4AB50072ED7E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E0A29F83277F4AC30072ED7E /* ThemeService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,14 +266,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A29F88277F665C0072ED7E /* ThemeView.swift in Sources */,
 				E050DF16277365A100C4D7A0 /* FortuneWheelViewModel.swift in Sources */,
 				E01B59152779FF2600EEA62B /* WheelSettingsDetailsView.swift in Sources */,
 				E01B59112779F86B00EEA62B /* WheelSettingsView.swift in Sources */,
 				E050DF1F2773729400C4D7A0 /* WheelBoltView.swift in Sources */,
 				E0A29F7D277F20490072ED7E /* EmojiTextField.swift in Sources */,
 				E0A29F7F277F2D700072ED7E /* Constants.swift in Sources */,
+				E0A29F84277F4AC30072ED7E /* ThemeService.swift in Sources */,
 				E0A29F81277F332C0072ED7E /* Localization.swift in Sources */,
 				E050DF142773657E00C4D7A0 /* FortuneWheelView.swift in Sources */,
+				E0A29F86277F4B000072ED7E /* Theme.swift in Sources */,
 				E050DF1D2773721600C4D7A0 /* WheelPointerView.swift in Sources */,
 				E050DF18277365D800C4D7A0 /* WheelView.swift in Sources */,
 				E01B59132779FCE800EEA62B /* WheelSettingsListCell.swift in Sources */,

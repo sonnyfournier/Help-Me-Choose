@@ -12,6 +12,7 @@ extension Preferences {
     struct Keys {
         static let wheelDecisionsKey = "WHEEL_DECISIONS_KEY"
         static let wheelDefaultDecisionsKey = "WHEEL_DEFAULT_DECISION_KEY"
+        static let themeNameKey = "THEME_NAME_KEY"
     }
 }
 

@@ -23,10 +23,13 @@ struct Triangle: Shape {
 
 struct WheelPointerView: View {
 
+    // MARK: - Properties
+    @Binding var decision: WheelDecision
+
     // MARK: - Views
     var body: some View {
         Triangle().frame(width: 50, height: 50)
-            .foregroundColor(Color("Pointer")).cornerRadius(24)
+            .foregroundColor(ThemeService.getTheme(from: decision.themeName).pointerColor).cornerRadius(24)
             .rotationEffect(.init(degrees: 180))
             .shadow(color: Color("ShadowDark").opacity(0.5), radius: 5, x: 0.0, y: 1.0)
     }
@@ -36,6 +39,6 @@ struct WheelPointerView: View {
 // MARK: - Preview
 struct WheelPointerView_Previews: PreviewProvider {
     static var previews: some View {
-        WheelPointerView()
+        WheelPointerView(decision: .constant(Constants.WheelDecisions.defaultDecision))
     }
 }
