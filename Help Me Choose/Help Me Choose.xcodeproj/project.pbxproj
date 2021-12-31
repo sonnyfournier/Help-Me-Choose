@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01B59112779F86B00EEA62B /* WheelSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01B59102779F86B00EEA62B /* WheelSettingsView.swift */; };
+		E01B59132779FCE800EEA62B /* WheelSettingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01B59122779FCE800EEA62B /* WheelSettingsListCell.swift */; };
+		E01B59152779FF2600EEA62B /* WheelSettingsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01B59142779FF2600EEA62B /* WheelSettingsDetailsView.swift */; };
+		E01B5919277A024100EEA62B /* WheelDecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01B5918277A024100EEA62B /* WheelDecision.swift */; };
+		E01B591C277A063400EEA62B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01B591B277A063400EEA62B /* Preferences.swift */; };
 		E050DEFF277362DB00C4D7A0 /* Help_Me_ChooseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DEFE277362DB00C4D7A0 /* Help_Me_ChooseApp.swift */; };
 		E050DF01277362DB00C4D7A0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF00277362DB00C4D7A0 /* TabBarView.swift */; };
 		E050DF03277362DE00C4D7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E050DF02277362DE00C4D7A0 /* Assets.xcassets */; };
@@ -17,9 +22,16 @@
 		E050DF1A2773660800C4D7A0 /* WheelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF192773660800C4D7A0 /* WheelCell.swift */; };
 		E050DF1D2773721600C4D7A0 /* WheelPointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF1C2773721600C4D7A0 /* WheelPointerView.swift */; };
 		E050DF1F2773729400C4D7A0 /* WheelBoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */; };
+		E0A29F7D277F20490072ED7E /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F7C277F20490072ED7E /* EmojiTextField.swift */; };
+		E0FDED19277B459200CB122B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0FDED1B277B459200CB122B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E01B59102779F86B00EEA62B /* WheelSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSettingsView.swift; sourceTree = "<group>"; };
+		E01B59122779FCE800EEA62B /* WheelSettingsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSettingsListCell.swift; sourceTree = "<group>"; };
+		E01B59142779FF2600EEA62B /* WheelSettingsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSettingsDetailsView.swift; sourceTree = "<group>"; };
+		E01B5918277A024100EEA62B /* WheelDecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelDecision.swift; sourceTree = "<group>"; };
+		E01B591B277A063400EEA62B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		E050DEFB277362DB00C4D7A0 /* Help Me Choose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Help Me Choose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E050DEFE277362DB00C4D7A0 /* Help_Me_ChooseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help_Me_ChooseApp.swift; sourceTree = "<group>"; };
 		E050DF00277362DB00C4D7A0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -31,6 +43,9 @@
 		E050DF192773660800C4D7A0 /* WheelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelCell.swift; sourceTree = "<group>"; };
 		E050DF1C2773721600C4D7A0 /* WheelPointerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPointerView.swift; sourceTree = "<group>"; };
 		E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelBoltView.swift; sourceTree = "<group>"; };
+		E0A29F7C277F20490072ED7E /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
+		E0FDED1A277B459200CB122B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0FDED1C277B459300CB122B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +59,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E01B5916277A020D00EEA62B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E01B59102779F86B00EEA62B /* WheelSettingsView.swift */,
+				E01B59122779FCE800EEA62B /* WheelSettingsListCell.swift */,
+				E01B59142779FF2600EEA62B /* WheelSettingsDetailsView.swift */,
+				E0A29F7C277F20490072ED7E /* EmojiTextField.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E01B5917277A023400EEA62B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E01B5918277A024100EEA62B /* WheelDecision.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E01B591A277A062800EEA62B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E01B591B277A063400EEA62B /* Preferences.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E050DEF2277362DB00C4D7A0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				E050DF0E2773630800C4D7A0 /* App */,
+				E01B591A277A062800EEA62B /* Helpers */,
+				E01B5917277A023400EEA62B /* Models */,
 				E050DF0C277362EC00C4D7A0 /* Resources */,
 				E050DF0D277362F200C4D7A0 /* Views */,
 			);
@@ -82,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				E050DF02277362DE00C4D7A0 /* Assets.xcassets */,
+				E0FDED1B277B459200CB122B /* Localizable.strings */,
 				E050DF04277362DE00C4D7A0 /* Preview Content */,
 			);
 			path = Resources;
@@ -110,6 +155,7 @@
 				E050DF132773657E00C4D7A0 /* FortuneWheelView.swift */,
 				E050DF15277365A100C4D7A0 /* FortuneWheelViewModel.swift */,
 				E050DF202773900500C4D7A0 /* Wheel */,
+				E01B5916277A020D00EEA62B /* Settings */,
 			);
 			path = "Fortune Wheel";
 			sourceTree = "<group>";
@@ -167,6 +213,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = E050DEF2277362DB00C4D7A0;
 			productRefGroup = E050DEFC277362DB00C4D7A0 /* Products */;
@@ -183,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FDED19277B459200CB122B /* Localizable.strings in Resources */,
 				E050DF06277362DE00C4D7A0 /* Preview Assets.xcassets in Resources */,
 				E050DF03277362DE00C4D7A0 /* Assets.xcassets in Resources */,
 			);
@@ -196,17 +244,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				E050DF16277365A100C4D7A0 /* FortuneWheelViewModel.swift in Sources */,
+				E01B59152779FF2600EEA62B /* WheelSettingsDetailsView.swift in Sources */,
+				E01B59112779F86B00EEA62B /* WheelSettingsView.swift in Sources */,
 				E050DF1F2773729400C4D7A0 /* WheelBoltView.swift in Sources */,
+				E0A29F7D277F20490072ED7E /* EmojiTextField.swift in Sources */,
 				E050DF142773657E00C4D7A0 /* FortuneWheelView.swift in Sources */,
 				E050DF1D2773721600C4D7A0 /* WheelPointerView.swift in Sources */,
 				E050DF18277365D800C4D7A0 /* WheelView.swift in Sources */,
+				E01B59132779FCE800EEA62B /* WheelSettingsListCell.swift in Sources */,
 				E050DF1A2773660800C4D7A0 /* WheelCell.swift in Sources */,
+				E01B591C277A063400EEA62B /* Preferences.swift in Sources */,
+				E01B5919277A024100EEA62B /* WheelDecision.swift in Sources */,
 				E050DF01277362DB00C4D7A0 /* TabBarView.swift in Sources */,
 				E050DEFF277362DB00C4D7A0 /* Help_Me_ChooseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E0FDED1B277B459200CB122B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0FDED1A277B459200CB122B /* en */,
+				E0FDED1C277B459300CB122B /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E050DF07277362DE00C4D7A0 /* Debug */ = {

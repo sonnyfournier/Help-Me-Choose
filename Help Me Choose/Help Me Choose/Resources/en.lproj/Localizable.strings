@@ -1,0 +1,28 @@
+/* 
+  Localizables.strings
+  Help Me Choose
+
+  Created by Sonny on 28/12/2021.
+  
+*/
+
+// MARK: - Tab bar
+"wheel" = "Wheel";
+
+// MARK: - Actions
+"save" = "Save";
+"cancel" = "Cancel";
+"reset" = "Reset";
+"back" = "Back";
+
+// MARK: - Wheel settings
+"decision" = "Decision";
+"decisions" = "Decisions";
+"decision_title" = "Decision title";
+"title" = "Title";
+"choice" = "Choice";
+"choices" = "Choices";
+"number_choices" = "%d choice(s)";
+"add_a_choice" = "Add a choice";
+"save_modifications" = "Save modifications";
+"ignore_modifications" = "Ignore modifications";

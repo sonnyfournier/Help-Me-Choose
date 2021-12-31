@@ -10,16 +10,14 @@ import SwiftUI
 class FortuneWheelViewModel: ObservableObject {
 
     // MARK: - Properties
-    var titles: [String]
+    @Published var decision: WheelDecision
     @Published var degree = 0.0
     @Published var selectedIndex: Int?
-    private var onSpinEnd: ((Int) -> ())?
     private var pendingRequestWorkItem: DispatchWorkItem?
 
     // MARK: - Initialization
-    init(titles: [String], onSpinEnd: ((Int) -> ())?) {
-        self.titles = titles
-        self.onSpinEnd = onSpinEnd
+    init(decision: WheelDecision) {
+        self.decision = decision
     }
 
     // MARK: - Functions
@@ -38,11 +36,10 @@ class FortuneWheelViewModel: ObservableObject {
             guard let self = self else { return }
 
             let distance = self.degree.truncatingRemainder(dividingBy: 360)
-            let pointer = floor(distance / (360 / Double(self.titles.count)))
+            let pointer = floor(distance / (360 / Double(self.decision.choices.count)))
 
-            let index = self.titles.count - Int(pointer) - 1
+            let index = self.decision.choices.count - Int(pointer) - 1
             self.selectedIndex = index
-            self.onSpinEnd?(self.titles.count - Int(pointer) - 1)
         }
 
         // Save the new work item and execute it after duration

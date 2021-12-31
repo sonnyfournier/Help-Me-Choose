@@ -9,6 +9,9 @@ import SwiftUI
 
 struct WheelBoltView: View {
 
+    // MARK: - Properties
+    var emoji: String
+
     // MARK: - Views
     var body: some View {
         ZStack {
@@ -17,12 +20,8 @@ struct WheelBoltView: View {
             Circle().frame(width: 63, height: 63)
                 .foregroundColor(Color("BoltCenter"))
                 .shadow(color: Color("ShadowLight").opacity(0.35), radius: 3, x: 0.0, y: 1.0)
-            Image(systemName: "arrow.clockwise")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 30, height: 30)
-                .foregroundColor(Color("ShadowLight").opacity(0.5))
-                .offset(x: 0, y: -2)
+            Text(emoji)
+                .font(.largeTitle)
         }
     }
 
@@ -31,6 +30,6 @@ struct WheelBoltView: View {
 // MARK: - Preview
 struct WheelBoltView_Previews: PreviewProvider {
     static var previews: some View {
-        WheelBoltView()
+        WheelBoltView(emoji: "🏀")
     }
 }

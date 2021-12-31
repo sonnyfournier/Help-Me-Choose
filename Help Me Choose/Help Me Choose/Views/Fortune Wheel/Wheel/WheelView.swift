@@ -18,13 +18,9 @@ struct WheelView: View {
                                    Color("Wheel6"), Color("Wheel7"), Color("Wheel8"), Color("Wheel9"), Color("Wheel10")]
 
     // MARK: - Initialization
-    init(labels: [String], weights: [Double]? = nil, selectedIndex: Binding<Int?> = .constant(nil)) {
-        self.labels = labels
-        if let weights = weights {
-            self.weights = weights.map({ Double((Int($0) * 100) / labels.count) })
-        } else {
-            self.weights = (0..<labels.count).map({ _ in Double(100 / labels.count) })
-        }
+    init(decision: WheelDecision, selectedIndex: Binding<Int?> = .constant(nil)) {
+        self.labels = decision.choices
+        self.weights = decision.weights.map({ Double((Int($0) * 100) / decision.choices.count) })
         self._selectedIndex = selectedIndex
     }
 
@@ -32,7 +28,7 @@ struct WheelView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .center) {
-                ForEach(0..<labels.count) { index in
+                ForEach(labels.indices, id: \.self) { index in
                     WheelCell(startAngle: startAngle(for: index), endAngle: endAngle(for: index))
                         .fill(colors[index % colors.count])
                     Text(labels[index]).foregroundColor(Color.white).fontWeight(.bold)
@@ -93,7 +89,7 @@ struct WheelView: View {
 // MARK: - Preview
 struct WheelView_Previews: PreviewProvider {
     static var previews: some View {
-        WheelView(labels: ["Paris", "Berlin", "New-York", "Barcelone", "Rome", "Casablanca", "Bruxelles", "Tokyo"],
-                  weights: [1, 1, 2, 3, 1, 1, 2, 1])
+        let decision = WheelDecision(title: "Vacances", choices: ["Italie", "Bretagne", "Norvège", "Luxembourg", "Chypre"])
+        WheelView(decision: decision)
     }
 }
