@@ -18,27 +18,27 @@ struct ThemeView: View {
         List {
             ForEach(themes.indices, id: \.self) { index in
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(themes[index].name)
+                    Text(themes[index].name).offset(x: 5, y: 0)
                     ZStack {
                         HStack(spacing: 0) {
                             ForEach(themes[index].colors, id: \.self) { color in
                                 ZStack {
                                     Rectangle()
                                         .fill(color)
-                                        .frame(height: 80)
+                                        .frame(height: 50)
                                 }
                             }
                         }
                         if decision.themeName == themes[index].name {
                             Rectangle()
                                 .fill(Color.white.opacity(0.5))
-                                .frame(height: 80)
+                                .frame(height: 50)
                             Image(systemName: "checkmark")
                         }
                     }
                     .cornerRadius(10)
                 }
-                .padding()
+                .padding(7.5)
                 .onTapGesture { decision.themeName = themes[index].name }
             }
         }

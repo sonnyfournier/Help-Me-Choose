@@ -33,7 +33,7 @@ struct WheelSettingsDetailsView: View {
 
                     buildChoicesSection()
 
-                    NavigationLink("theme", destination: ThemeView(decision: $decision))
+                    Section("theme") { NavigationLink("theme", destination: ThemeView(decision: $decision)) }
                 }
             }
             .confirmationDialog("Change background", isPresented: $showUnsavedChangesSheet) {
