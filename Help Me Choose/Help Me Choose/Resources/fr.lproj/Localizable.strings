@@ -29,7 +29,7 @@
 "theme" = "Thème";
 
 // MARK: - Wheel defaults decisions
-"next_vacation_destination" = "Prochaine vacances";
+"next_vacation_destination" = "Prochaines vacances";
 "france" = "France";
 "belgium" = "Belgique";
 "netherland" = "Pays-Bas";
