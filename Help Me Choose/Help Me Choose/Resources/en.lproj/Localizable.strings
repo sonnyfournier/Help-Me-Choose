@@ -26,3 +26,13 @@
 "add_a_choice" = "Add a choice";
 "save_modifications" = "Save modifications";
 "ignore_modifications" = "Ignore modifications";
+
+// MARK: - Wheel defaults decisions
+"next_vacation_destination" = "Next vacation destination";
+"france" = "France";
+"belgium" = "Belgium";
+"netherland" = "Netherland";
+"spain" = "Spain";
+"italia" = "Italia";
+"japan" = "Japan";
+"korea" = "Korea";

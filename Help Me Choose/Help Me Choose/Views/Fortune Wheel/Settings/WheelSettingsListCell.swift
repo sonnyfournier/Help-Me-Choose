@@ -15,7 +15,7 @@ struct WheelSettingsListCell: View {
     // MARK: - Views
     var body: some View {
         HStack {
-            if Preferences.retrieveSelectedWheelDecision().id == decision.id {
+            if decision.isSelected {
                 Color("Pointer")
                     .frame(width: 3)
                     .cornerRadius(1.5)
@@ -36,6 +36,6 @@ struct WheelSettingsListCell: View {
 // MARK: - Preview
 struct WheelSettingsListCell_Previews: PreviewProvider {
     static var previews: some View {
-        WheelSettingsListCell(decision: WheelDecision(title: "Vacances", choices: ["Choice 1", "Choice 2"]))
+        WheelSettingsListCell(decision: Constants.WheelDecisions.defaultDecision)
     }
 }

@@ -59,6 +59,7 @@ struct WheelSettingsDetailsView: View {
             HStack {
                 EmojiTextField(text: $decision.emoji, placeholder: "🤔")
                     .onReceive(decision.emoji.publisher.collect()) {
+                        // TODO: Fix this for emoji that takes two "slots"
                         guard let text = Unicode.Scalar(String($0.suffix(1))), text.properties.isEmoji else {
                             decision.emoji = String(decision.emoji.prefix(1))
                             return
@@ -112,8 +113,10 @@ struct WheelSettingsDetailsView: View {
     }
 
     private func save() {
-        if decision.id == Preferences.retrieveSelectedWheelDecision().id {
-            Preferences.saveSelectedWheelDecision(decision)
+        // TODO: Show error
+        if decision.title.isEmpty || decision.choices.isEmpty {
+            close()
+            return
         }
 
         Preferences.saveWheelDecision(decision)
@@ -139,6 +142,6 @@ struct WheelSettingsDetailsView: View {
 // MARK: - Preview
 struct WheelSettingsDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        WheelSettingsDetailsView(decision: WheelDecision(title: "Vacances", choices: ["Choice 1", "Choice 2"]))
+        WheelSettingsDetailsView(decision: Constants.WheelDecisions.defaultDecision)
     }
 }

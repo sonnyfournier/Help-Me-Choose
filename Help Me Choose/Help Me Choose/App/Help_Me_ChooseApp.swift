@@ -11,7 +11,9 @@ import SwiftUI
 struct Help_Me_ChooseApp: App {
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+            TabBarView().onAppear(perform: {
+                Preferences.saveWheelDefaultDecision()
+            })
         }
     }
 }

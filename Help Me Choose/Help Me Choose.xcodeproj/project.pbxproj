@@ -23,6 +23,8 @@
 		E050DF1D2773721600C4D7A0 /* WheelPointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF1C2773721600C4D7A0 /* WheelPointerView.swift */; };
 		E050DF1F2773729400C4D7A0 /* WheelBoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */; };
 		E0A29F7D277F20490072ED7E /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F7C277F20490072ED7E /* EmojiTextField.swift */; };
+		E0A29F7F277F2D700072ED7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F7E277F2D700072ED7E /* Constants.swift */; };
+		E0A29F81277F332C0072ED7E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A29F80277F332C0072ED7E /* Localization.swift */; };
 		E0FDED19277B459200CB122B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0FDED1B277B459200CB122B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		E050DF1C2773721600C4D7A0 /* WheelPointerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPointerView.swift; sourceTree = "<group>"; };
 		E050DF1E2773729400C4D7A0 /* WheelBoltView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelBoltView.swift; sourceTree = "<group>"; };
 		E0A29F7C277F20490072ED7E /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
+		E0A29F7E277F2D700072ED7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E0A29F80277F332C0072ED7E /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		E0FDED1A277B459200CB122B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E0FDED1C277B459300CB122B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +85,8 @@
 		E01B591A277A062800EEA62B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E0A29F7E277F2D700072ED7E /* Constants.swift */,
+				E0A29F80277F332C0072ED7E /* Localization.swift */,
 				E01B591B277A063400EEA62B /* Preferences.swift */,
 			);
 			path = Helpers;
@@ -248,6 +254,8 @@
 				E01B59112779F86B00EEA62B /* WheelSettingsView.swift in Sources */,
 				E050DF1F2773729400C4D7A0 /* WheelBoltView.swift in Sources */,
 				E0A29F7D277F20490072ED7E /* EmojiTextField.swift in Sources */,
+				E0A29F7F277F2D700072ED7E /* Constants.swift in Sources */,
+				E0A29F81277F332C0072ED7E /* Localization.swift in Sources */,
 				E050DF142773657E00C4D7A0 /* FortuneWheelView.swift in Sources */,
 				E050DF1D2773721600C4D7A0 /* WheelPointerView.swift in Sources */,
 				E050DF18277365D800C4D7A0 /* WheelView.swift in Sources */,

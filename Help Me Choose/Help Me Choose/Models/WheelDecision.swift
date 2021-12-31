@@ -14,13 +14,15 @@ struct WheelDecision: Identifiable, Hashable, Codable {
     var title: String
     var choices: [String]
     var weights: [Double]
+    var isSelected: Bool
 
-    init(emoji: String? = nil, title: String, choices: [String], weights: [Double]? = nil) {
+    init(emoji: String? = nil, title: String, choices: [String], weights: [Double]? = nil, isSelected: Bool = false) {
         self.id = UUID()
         self.emoji = emoji ?? "🤔"
         self.title = title
         self.choices = choices
         self.weights = weights ?? Array(repeating: 1, count: choices.count)
+        self.isSelected = isSelected
     }
 
 }

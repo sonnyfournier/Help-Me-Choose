@@ -83,7 +83,6 @@ struct WheelSettingsView: View {
 // MARK: Preview
 struct WheelSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        let decision = WheelDecision(title: "Decision", choices: [])
-        WheelSettingsView(selectedDecision: .constant(decision))
+        WheelSettingsView(selectedDecision: .constant(Constants.WheelDecisions.defaultDecision))
     }
 }

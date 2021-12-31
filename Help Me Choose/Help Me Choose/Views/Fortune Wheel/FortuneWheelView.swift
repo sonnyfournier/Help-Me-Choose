@@ -31,6 +31,8 @@ struct FortuneWheelView: View {
                 Text(viewModel.decision.title)
                     .font(.title2)
                     .fontWeight(.bold)
+                    .padding()
+                    .multilineTextAlignment(.center)
 
                 Spacer()
 
